@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gift.house">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GiftHouse"
+        tools:ignore="AllowBackup">
+        <activity android:name=".CheckoutActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="Checkout"/>
+        <activity
+            android:name=".OrderDetailsActivity"
+            android:label="Order Details"
+            android:parentActivityName=".OrdersActivity" />
+        <activity
+            android:name=".OrdersActivity"
+            android:label="Orders"
+            android:parentActivityName=".AdminActivity" />
+        <activity
+            android:name=".UsersActivity"
+            android:label="Users"
+            android:parentActivityName=".AdminActivity" />
+        <activity
+            android:name=".ProductsActivity"
+            android:label="Products"
+            android:parentActivityName=".AdminActivity" />
+        <activity
+            android:name=".CategoriesActivity"
+            android:label="Categories"
+            android:parentActivityName=".AdminActivity" />
+        <activity
+            android:name=".AdminActivity"
+            android:label="Gift House (Admin)" />
+        <activity
+            android:name=".AddCategory"
+            android:parentActivityName=".CategoriesActivity" />
+        <activity
+            android:name=".AddProduct"
+            android:label="Add Product"
+            android:parentActivityName=".ProductsActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NavigationTheme" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
